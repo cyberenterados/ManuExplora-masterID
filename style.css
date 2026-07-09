@@ -1,0 +1,447 @@
+/** Agregamos la fuente que vamos a utilizar en la pagina  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   SECCION INICIO Y VIDEOS DE FONDO
+   ========================================= */
+#inicio {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-desktop, .video-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.video-mobile { display: none; } /* Oculto en PC por defecto */
+.capa-oscura {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(11, 11, 26, 0.8), rgba(11, 11, 26, 0.6));
+    z-index: 2;
+}
+#inicio .contenido {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+/* HEADER / MENU DE NAVEGACION */
+#inicio .contenido header{
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+#inicio .contenido header .contenido-header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+#inicio .contenido header .contenido-header h1{
+    text-align: center;
+    color: #6764a4;
+    font-size: 24px;
+}
+#inicio .contenido header .contenido-header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+#inicio .contenido header .contenido-header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 400;
+    transition: .5s;
+}
+#inicio .contenido header .contenido-header nav ul a:hover,
+#inicio .contenido header .contenido-header nav ul a.seleccionando {
+    color: #6764a4;
+}
+#inicio .contenido header .contenido-header .redes a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    transition: .5s;
+}
+#inicio .contenido header .contenido-header .redes a:hover{
+    color: #6764a4;
+}
+#icon-nav{
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+/* =========================================
+   TEXTOS CYBER Y CONSOLA DE IA
+   ========================================= */
+.presentacion-cyber {
+    text-align: center;
+    margin-top: 25vh;
+    padding: 0 20px;
+}
+.glitch-text {
+    font-size: 70px;
+    color: #fff;
+    text-shadow: 0 0 10px #6764a4, 0 0 20px #6764a4, 0 0 40px #6764a4;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.consola-ia {
+    background: rgba(5, 5, 10, 0.7);
+    border: 1px solid rgba(103, 100, 164, 0.5);
+    border-left: 4px solid #6764a4;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+.prompt-verde { color: #4ade80; font-size: 14px; display: block; margin-bottom: 5px; }
+.prompt-blanco { color: #94a3b8; font-size: 14px; display: block; margin-bottom: 15px; }
+.prompt-cursor { color: #fff; font-size: 18px; font-weight: bold; }
+.cursor { color: #6764a4; animation: parpadeo 1s infinite; }
+
+@keyframes parpadeo { 
+    0%, 100% { opacity: 1; } 
+    50% { opacity: 0; } 
+}
+
+/* =========================================
+   SECCION SOBRE MI
+   ========================================= */ 
+#sobremi{
+    background: linear-gradient(#6764a4, rgba(33,16,16,.8)), url("https://images.stockcake.com/public/6/c/2/6c295ddc-f9a0-4483-bbe8-34f075943de7_large/modern-recording-studio-stockcake.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #eaeaf1;
+    gap: 40px;
+}
+#sobremi .contenedor-foto{
+    max-width: 400px;
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+#sobremi .contenedor-foto img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    background-color: #4e3b50;
+    padding: 10px;
+}
+#sobremi .sobremi{
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+#sobremi .sobremi .titulo-seccion{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #e7e7ee;
+    text-decoration: underline;
+    text-decoration-color: #f8f8fa;
+    text-decoration-thickness: 5px;
+    margin-bottom: 20px;
+}
+#sobremi .sobremi h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #BDCDD6;
+}
+#sobremi .sobremi p{
+    font-size: 15px;
+    line-height: 28px;
+    color: #f3eeee;
+    margin-bottom: 15px;
+}
+#sobremi .sobremi a.sobremi-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #f3efef;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #f3eeee;
+    margin-top: 15px;
+    transition: .5s;
+}
+#sobremi .sobremi a.sobremi-btn:hover{
+    background-color: #6764a4;
+    color: #fff;
+}
+
+/* =========================================
+   SECCION HABILIDADES (DINÁMICAS)
+   ========================================= */
+.contenedor-skills{
+    background: linear-gradient(#6764a4, rgba(33,16,16,.8)), url("https://images.stockcake.com/public/6/c/2/6c295ddc-f9a0-4483-bbe8-34f075943de7_large/modern-recording-studio-stockcake.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 15px;
+    text-align: center;
+    color: #BDCDD6;
+}
+.contenedor-skills h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #e7e7ee;
+    text-decoration: underline;
+    text-decoration-color: #f8f8fa;
+    text-decoration-thickness: 5px;
+    margin-bottom: 15px;
+}
+.contenedor-skills .habilidades-desc {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+.contenedor-skills .skill{
+    max-width: 600px;
+    margin: 30px auto;
+}
+.contenedor-skills .skill .info{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor-skills .skill .Lista{
+    display: inline-block;
+    margin-right: 15px;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+}
+.contenedor-skills .skill .barra{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.contenedor-skills .skill .barra .barra-progreso {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 0; 
+    transition: width 2s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+/* =========================================
+   SECCION PORTAFOLIO (REDES / FONDO CUÁNTICO)
+   ========================================= */
+#portafolio {
+    position: relative;
+    padding: 100px 15px;
+    background-color: #0b0b1a; 
+    overflow: hidden;
+}
+#quantumCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    pointer-events: none; 
+}
+#portafolio .contenido-portafolio {
+    position: relative;
+    z-index: 2; 
+    max-width: 1100px;
+    margin: auto;
+}
+#portafolio .titulo-seccion{
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #6764a4;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+    text-shadow: 0 0 10px rgba(103, 100, 164, 0.8);
+}
+#portafolio .fila {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+#portafolio .fila .proyecto {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(30,30,50,0.8), rgba(15,15,25,0.9));
+    border: 1px solid rgba(103, 100, 164, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#portafolio .fila .proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(103, 100, 164, 0.5);
+    border-color: #6764a4;
+}
+.social-icon-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: #6764a4;
+    transition: 0.4s;
+}
+#portafolio .fila .proyecto:hover .social-icon-wrapper {
+    transform: scale(1.1);
+    color: #fff;
+    filter: drop-shadow(0 0 15px #6764a4);
+}
+#portafolio .fila .proyecto .info {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 20, 0.95);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    transition: 0.4s;
+}
+#portafolio .fila .proyecto:hover .info {
+    bottom: 0;
+}
+#portafolio .fila .proyecto .info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #6764a4;
+}
+#portafolio .fila .proyecto .info p {
+    font-size: 13px;
+    color: #bbb;
+}
+.enlace-absoluto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer{
+    background-color: #050505;
+    color: #6764a4;
+    text-align: center;
+    padding: 40px 15px;
+}
+footer p { margin-bottom: 10px; }
+footer a{
+    text-decoration: none;
+    color: #6764a4;
+    display: inline-block;
+    margin: 10px;
+    font-size: 26px;
+    transition: 0.3s;
+}
+footer a:hover { color: #fff; transform: scale(1.1); }
+
+/* =========================================
+   RESPONSIVE (TABLETS Y MÓVILES)
+   ========================================= */
+@media screen and (max-width:800px){
+    .redes{ display: none; }
+    nav { display: none; }
+    nav.responsive{
+        display: block;
+        background-color: rgba(0,0,0,0.98); 
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        border-bottom: 2px solid #6764a4;
+    }
+    nav.responsive ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    #icon-nav{ display: block; font-size: 24px; }
+    
+    /* Intercambio de videos: Se apaga el de PC, se enciende el Móvil */
+    .video-desktop { display: none; }
+    .video-mobile { display: block; }
+    
+    /* Ajuste de textos cyber en móviles */
+    .glitch-text { font-size: 40px; margin-bottom: 20px; margin-top: 15vh;}
+    .consola-ia { font-size: 12px; padding: 15px; max-width: 90%; }
+    .prompt-cursor { font-size: 15px; }
+
+    #sobremi { padding: 60px 15px; }
+    #sobremi .sobremi { text-align: center; }
+    #portafolio .fila .proyecto { width: 100%; max-width: 280px; height: 250px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

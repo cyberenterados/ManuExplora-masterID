@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portafolio de ManuExplora. Periodista, creador de contenido audiovisual y especialista en Relaciones Públicas y Publicidad."> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>ManuExplora - Portafolio</title>
+    <link rel="icon" type="image/x-icon" href="icon/code-solid.svg">
+    <meta property="og:title" content="ManuExplora - Portafolio Audiovisual"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://alejanpublic.github.io/Portafolio-Beta/"/>
+    <meta property="og:image" content="https://pbs.twimg.com/media/GZBWisiXsAA1i1i?format=jpg&name=large" />
+    <meta property="og:description" content="Descubre los proyectos y documentales de ManuExplora."/>
+</head>
+<body>
+    <section id="inicio">
+        <video class="video-desktop" autoplay loop muted playsinline>
+            <source src="vid/Video-WebMEmaster-Horz1.mp4" type="video/mp4">
+        </video>
+        <video class="video-mobile" autoplay loop muted playsinline>
+            <source src="vid/Video-WebMEmaster-VER.mp4" type="video/mp4">
+        </video>
+        
+        <div class="capa-oscura"></div>
+
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>ManuExplora</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionando" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MÍ</a></li>
+                            <li><a href="#skills" onclick="seleccionar(this)">HABILIDADES</a></li>
+                            <li><a href="#portafolio" onclick="seleccionar(this)">REDES</a></li>
+                        </ul>
+                    </nav>
+
+                    <div id="icon-nav" onclick="responsiveMenu()" class="blanco">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <div class="redes">
+                        <a href="https://www.youtube.com/@manuexplora1136" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/manuxplora?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/manuexplora/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/ExploraManu" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@manuexplora?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="presentacion-cyber">
+                <h2 class="glitch-text">ManuExplora</h2>
+                <div class="consola-ia">
+                    <span class="prompt-verde">> IA_Core.status: Analizando perfil egresado URBE... [OK]</span><br>
+                    <span class="prompt-blanco">> Conexión establecida: Host en Buenos Aires, Argentina.</span><br>
+                    <span class="prompt-blanco">> Sistema: Iniciando ecosistema Full Stack & Audiovisual...</span><br>
+                    <span class="prompt-cursor">> Role: <span id="typewriter"></span><span class="cursor">_</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/img-6.1.png" alt="Retrato de ManuExplora, creador de contenido audiovisual">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">SOBRE MÍ</p>
+            <h3>Desarrollador WEB y Creador de Contenido</h3>
+            <p class="sobremi-p">Soy periodista y comunicador social egresado de URBE, especializado en Publicidad y Relaciones Públicas. Tras más de una década absorbiendo la cultura de Buenos Aires, me preparo para expandir mis horizontes desde España. ManuExplora es mi proyecto de vida, una plataforma dedicada a la creación de contenido digital y la documentación en video de historias auténticas.</p>
+            <p class="sobremi-p">Mi visión está moldeada por una trayectoria diversa: desde mis inicios profesionales en atención al cliente y el sector bancario, hasta la constancia y disciplina forjada por el entrenamiento físico y mis años en el skateboarding. Cada experiencia suma a la narrativa visual y estructural de mis proyectos, buscando siempre conectar a través de cada video.</p>
+            <a class="sobremi-btn" href="https://www.youtube.com/channel/UCj0FnfaZso2mBT9VRwMKi4g" target="_blank">Ir a mi Canal</a>
+        </div>
+    </section>
+
+    <section class="contenedor-skills" id="skills">
+        <h3>Habilidades</h3>
+        <p class="habilidades-desc">Controla estos valores directamente desde el HTML cambiando el atributo "data-percentage"</p>
+        
+        <div class="skill">
+            <div class="info">
+                <p class="habilidades-p"><span class="Lista"></span>Comunicación</p>
+                <span class="porcentaje">85%</span>
+            </div>
+            <div class="barra">
+                <div class="barra-progreso" data-percentage="85"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p class="habilidades-p"><span class="Lista"></span>Edición Audiovisual</p>
+                <span class="porcentaje">80%</span>
+            </div>
+            <div class="barra">
+                <div class="barra-progreso" data-percentage="80"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p class="habilidades-p"><span class="Lista"></span>Creatividad y Guion</p>
+                <span class="porcentaje">90%</span>
+            </div>
+            <div class="barra">
+                <div class="barra-progreso" data-percentage="90"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p class="habilidades-p"><span class="Lista"></span>Desarrollo Web / Diseño</p>
+                <span class="porcentaje">65%</span>
+            </div>
+            <div class="barra">
+                <div class="barra-progreso" data-percentage="65"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portafolio">
+        <canvas id="quantumCanvas"></canvas>
+        
+        <div class="contenido-portafolio">
+            <h3 class="titulo-seccion">Conecta Conmigo</h3>
+            <div class="fila">
+                
+                <div class="proyecto">
+                    <div class="overlay"></div>
+                    <div class="social-icon-wrapper"><i class="fa-solid fa-globe"></i></div>
+                    <div class="info">
+                        <h4>CyberEnterados</h4>
+                        <p>Nuestra Web</p>
+                    </div>
+                    <a href="#" target="_blank" class="enlace-absoluto"></a>
+                </div>
+
+                <div class="proyecto">
+                    <div class="overlay"></div>
+                    <div class="social-icon-wrapper"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="info">
+                        <h4>X (Twitter)</h4>
+                        <p>@ExploraManu</p>
+                    </div>
+                    <a href="https://x.com/ExploraManu" target="_blank" class="enlace-absoluto"></a>
+                </div>
+
+                <div class="proyecto">
+                    <div class="overlay"></div>
+                    <div class="social-icon-wrapper"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="info">
+                        <h4>YouTube</h4>
+                        <p>@manuexplora1136</p>
+                    </div>
+                    <a href="https://www.youtube.com/@manuexplora1136" target="_blank" class="enlace-absoluto"></a>
+                </div>
+
+                <div class="proyecto">
+                    <div class="overlay"></div>
+                    <div class="social-icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="info">
+                        <h4>Instagram</h4>
+                        <p>@manuexplora</p>
+                    </div>
+                    <a href="https://www.instagram.com/manuexplora/" target="_blank" class="enlace-absoluto"></a>
+                </div>
+
+                <div class="proyecto">
+                    <div class="overlay"></div>
+                    <div class="social-icon-wrapper"><i class="fa-brands fa-tiktok"></i></div>
+                    <div class="info">
+                        <h4>TikTok</h4>
+                        <p>@manuexplora</p>
+                    </div>
+                    <a href="https://www.tiktok.com/@manuexplora?lang=es" target="_blank" class="enlace-absoluto"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>Todos los derechos reservados - 2026</p>
+        <p>ManuExplora Web Optimizada</p>
+        <div class="redes">
+            <a href="https://www.youtube.com/@manuexplora1136" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/manuxplora?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/manuexplora/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/ExploraManu" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.tiktok.com/@manuexplora?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
